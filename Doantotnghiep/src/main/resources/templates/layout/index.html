@@ -58,6 +58,10 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js"
 	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
 	crossorigin="anonymous"></script>
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
@@ -78,7 +82,7 @@ input.ng-invalid.ng-touched {
 </style>
 </head>
 
-<body>
+<body ng-app="app" ng-controller="covid">
 
 	<!--/ Form Search End /-->
 
@@ -87,6 +91,9 @@ input.ng-invalid.ng-touched {
 		<div th:replace="/layout/_menu.html"></div>
 	</nav>
 	<!--/ Nav End /-->
+	
+	
+	
 	<div>
 		<section>
 			<div th:replace="${main}"></div>
@@ -310,8 +317,9 @@ input.ng-invalid.ng-touched {
 			</div>
 		</div>
 	</div>
-
-
+	
+	
+	
 	<script src="/assert/js/jquery.min.js"></script>
 	<script src="/assert/js/jquery-migrate-3.0.1.min.js"></script>
 	<script src="/assert/js/popper.min.js"></script>
@@ -336,6 +344,7 @@ input.ng-invalid.ng-touched {
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 	<script src="/assert/js/script1.js"></script>
+	<script src="/assert/js/covid.js"></script>
 
 </body>
 </html>

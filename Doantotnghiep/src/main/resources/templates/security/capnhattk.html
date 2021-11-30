@@ -14,7 +14,7 @@
 						<div class="col-md-7 col-sm-12 ftco-animate mb-5">
 							<p class="breadcrumbs"
 								data-scrollax=" properties: { translateY: '70%', opacity: 1.6}">
-								<span class="mr-2"><a href="index.html">Trang chủ</a></span>
+								<span class="mr-2"><a th:href="@{/}">Trang chủ</a></span> <span>Cập nhật tài khoản</span>
 							</p>
 							<h1 class="mb-3"
 								data-scrollax=" properties: { translateY: '70%', opacity: .9}">Cập
@@ -27,48 +27,76 @@
 
 		<div>
 			<div class="conteiner row">
-				<div class="card mb-3 col-lg-7 col-md-12 col-sm-12"
-					style="max-width: 560px;">
+				<div class="card mb-3 col-lg-7 col-md-7 col-sm-7"
+					>
 					<div class="row g-0">
 						<div class="col-md-12">
 							<div class="card-body">
 								<h1 class="card-title"
-									style="color: blueviolet; font-weight: bolder;">CẬP NHẬT
+									style="color: #3399FF; font-weight: bolder;">CẬP NHẬT
 									TÀI KHOẢN</h1>
 								<br>
-								<form name="error">
+								<form th:action="@{/taikhoan/capnhat}" method="post"
+									th:object="${acc}">
 									<div class="row">
 										<div class="form-group col-sm-12">
-											<label for=""></label> <input type="text"
-												class="form-control" minlength="3" maxlength="25"
-												name="txtTaiKhoan" placeholder="Tải khoản"
-												ng-model="taikhoan" disabled required>
+											<label for=""></label> <i th:errors="*{username}"></i> <input
+												type="text" class="form-control" readonly="readonly"
+												th:field="*{username}">
 
 										</div>
 										<div class="form-group col-sm-12">
-											<label for=""></label> <input type="text" name="txtHoTen"
-												class="form-control" placeholder="Họ và tên"
-												pattern="^\S([a-zA-Z\xC0-\uFFFF]{1,60}[ \-\']{0,1}){1,}$"
-												ng-model="fullname" maxlength="25" required />
+											<label for=""></label> <i th:errors="*{hoten}"></i> <input
+												type="text" th:field="*{hoten}" class="form-control"
+												placeholder="Họ và tên" />
 
 										</div>
 										<div class="form-group col-sm-12">
-											<label for=""></label> <input type="email" name="txtEmail"
-												class="form-control" placeholder="Email" ng-model="email"
-												required />
+											<label for=""></label> <i th:errors="*{diachi}"></i> <input
+												type="text" th:field="*{diachi}" class="form-control"
+												placeholder="Địa chỉ" />
 
 										</div>
 										<div class="form-group col-sm-12">
-											<label for=""></label> <input type="date" name="txtBirthday"
-												class="form-control" placeholder="Ngày sinh"
-												ng-model="birthday" required min="1990-01-01"
-												max="2003-01-01" />
+										 <br>
+											<fieldset class="form-group row">
+												<legend class="col-form-label col-sm-3 float-sm-left pt-0">Giới
+													tính</legend>
+												<i th:errors="*{gioitinh}"></i>
+												<div class="col-sm-9">
+													<div class="form-check-inline">
+														<input class="form-check-input" type="radio"
+															th:field="*{gioitinh}" value="1"> <label
+															class="form-check-label" for="gridRadios1"> Nam </label>
+													</div>
+													<div class="form-check-inline">
+														<input class="form-check-input" type="radio"
+															th:field="*{gioitinh}" value="0"> <label
+															class="form-check-label" for="gridRadios2"> Nữ </label>
+													</div>
+
+												</div>
+											</fieldset>
+											
+										</div>
+										<div class="form-group col-sm-12">
+											<label for=""></label> <i th:errors="*{sdt}"></i> <input
+												type="text" th:field="*{sdt}" class="form-control"
+												placeholder="Số điện thoại" />
 
 										</div>
+
+										<div class="form-group col-sm-12">
+											<label for=""></label> <i th:errors="*{ngaysinh}"></i> <input
+												type="date" th:field="*{ngaysinh}" class="form-control"
+												placeholder="Ngày sinh" />
+
+										</div>
+										<i th:text="${message}"></i>
 										<div class="form-group col-sm-12">
 											<br>
-											<button type="button" class="btn btn-primary"
-												ng-show="error.$valid">
+
+											<button class="btn btn-primary">
 												<i class="bi bi-arrow-clockwise"></i> CẬP NHẬT
 											</button>
 										</div>
@@ -78,9 +106,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-12 col-sm-12">
-					<img src="/assert/images/coronavirus-update-concept_23-2148729019.webp"
-						style="width: 100%; height: 600px;" alt="...">
+				<div class="col-lg-5 col-md-5 col-sm-5">
+					<img
+						src="/assert/images/gallery-1.jpg"
+						style="width: 100%; height: 785px;" alt="...">
 				</div>
 			</div>
 		</div>

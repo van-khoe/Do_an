@@ -6,4 +6,6 @@ public interface taikhoanService {
 
 	taikhoan findById(String username);
 
+	taikhoan save(taikhoan acc);
+
 }

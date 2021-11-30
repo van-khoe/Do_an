@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+	<main>
+		<section class="home-slider owl-carousel">
+			<div class="slider-item bread-item"
+				style="background-image: url('/assert/images/bg_1.jpg');"
+				data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="container" data-scrollax-parent="true">
+					<div class="row slider-text align-items-end">
+						<div class="col-md-7 col-sm-12 ftco-animate mb-5">
+							<p class="breadcrumbs"
+								data-scrollax=" properties: { translateY: '70%', opacity: 1.6}">
+								<span class="mr-2"><a href="index.html">Trang quản
+										trị</a></span>
+							</p>
+							<h1 class="mb-3"
+								data-scrollax=" properties: { translateY: '70%', opacity: .9}">Lịch
+								sử tiêm</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="conteiner">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th scope="col">Tên mũi</th>
+						<th scope="col">Ngày tiêm</th>
+						<th scope="col">Loại vacxin</th>
+						<th scope="col">Lô số</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Mũi 1</th>
+						<td>10-12-2021</td>
+						<td>Vaccine COVID-19 Vaccine AstraZeneca</td>
+						<td>1899</td>
+					</tr>
+					<tr>
+						<th scope="row">Mũi 2</th>
+						<td>10-12-2021</td>
+						<td>Vaccine COVID-19 Vaccine AstraZeneca</td>
+						<td>1087</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</main>
+</body>
+</html>

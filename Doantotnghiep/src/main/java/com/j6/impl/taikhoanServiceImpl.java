@@ -18,4 +18,11 @@ public class taikhoanServiceImpl implements taikhoanService{
 		return tkDao.findById(username).get();
 	}
 
+	@Override
+	public taikhoan save(taikhoan acc) {
+		// TODO Auto-generated method stub
+		
+		return tkDao.save(acc);
+	}
+
 }

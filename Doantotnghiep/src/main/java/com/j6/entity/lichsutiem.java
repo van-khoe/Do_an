@@ -22,7 +22,7 @@ import lombok.Data;
 @Table(name = "lichsutiem")
 public class lichsutiem implements Serializable {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long idlichsutiem;
 	@Temporal(TemporalType.DATE)
 	@Column(name = "ngaytiem")
@@ -37,5 +37,5 @@ public class lichsutiem implements Serializable {
 	nhanvien nhanvien;
 	@ManyToOne()
 	@JoinColumn(name = "dangkytiemchung_iddangkytiemchung")
-	dangkytiemchung dangkytiemchung;
+	nguoitiem dangkytiemchung;
 }

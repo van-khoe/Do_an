@@ -48,7 +48,7 @@
 						class="nav-link">Liên hệ</a></li>
 					<li class="nav-item"
 						th:if="${#request.isUserInRole('PM') or #request.isUserInRole('ADMIN')}"><a
-						th:href="@{/home/index}" class="nav-link">Quản trị viên</a></li>
+						th:href="@{/admin}" class="nav-link">Quản trị viên</a></li>
 					<li class="nav-item cta" th:unless="${#request.remoteUser}"><a
 						th:href="@{/home/index}" class="nav-link" data-toggle="modal"
 						data-target="#modalRequest"><span>Đăng nhập</span></a></li>

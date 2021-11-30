@@ -1,0 +1,56 @@
+<div class="card">
+	<div class="card-header">PRODUCT EDITION</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-sm-4 text-center">
+				<label for="image"> <img style="width: 100%"
+					ng-src="/assert/images/{{form.photo}}">
+				</label>
+			</div>
+			<div class="col-sm-8">
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="usr">TĂ i khoáº£n:</label> <input id="us" ng-model="form.username"
+							type="text" class="form-control" required="required">
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="usr">Máº­t kháº©u:</label> <input ng-model="form.password"
+							type="text" class="form-control" required="required">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="usr">áº¢nh</label><input type="file"
+							class="form-control-file border" onchange="angular.element(this).scope().imageChanged(this.files)" required="required">
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="usr">Há»� vĂ  tĂªn:</label>
+							<input ng-model="form.fullname"
+							type="text" class="form-control" required="required">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="usr">Ä�á»‹a chá»‰:</label>
+							<input ng-model="form.address"
+							type="text" class="form-control" >
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="usr">NgĂ y sinh:</label><input
+							ng-model="form.birthday" type="date" class="form-control" required="required">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer text-center">
+		<button id="create" ng-click="create()" type="button" class="btn btn-primary">
+			<b class="fa fa-plus-square"></b> Create
+		</button>
+		<button id="update" ng-click="update()" type="button" class="btn btn-success"> <b class="fa fa-upload"></b> Update</button>
+		<button id="delete" ng-click="delete(form.username)" type="button" class="btn btn-danger">
+			<b class="fa fa-trash"></b> Delete
+		</button>
+		<button ng-click="reset()" type="button" class="btn btn-info"> <b class="fa fa-refresh"></b> Resert</button>
+	</div>
+</div>

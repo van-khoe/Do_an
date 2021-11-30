@@ -1,0 +1,86 @@
+
+<div id="myDIV">
+	<div class="card">
+		<div class="card-header text-center"><h3> <strong> Chỉnh sửa vai trò </strong> </h3></div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-sm-2 text-center"></div>
+				<div class="col-sm-8">
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="usr">Mã vai trò:</label> <input id="us" ng-model="form.id"
+								type="text" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="usr">Tên vai trò:</label> <input ng-model="form.name"
+								type="text" class="form-control">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="card-footer text-center">
+			<button id="create" ng-click="create()" type="button" class="btn btn-primary">
+				<b class="fa fa-plus-square"></b> Create
+			</button>
+			<button id="update" ng-click="update()" type="button" class="btn btn-success">
+				<b class="fa fa-upload"></b> Update
+			</button>
+			<button id="delete" ng-click="delete(form.id)" type="button"
+				class="btn btn-danger">
+				<b class="fa fa-trash"></b> Delete
+			</button>
+			<button ng-click="reset()" type="button" class="btn btn-info">
+				<b class="fa fa-refresh"></b> Resert
+			</button>
+		</div>
+	</div>
+	<div class="card row">
+		<div class="card-header text-center"><h3> <strong>Dach sách các vai trò</strong> </h3></div>
+		<table class="table table-striped text-center">
+			<thead class="bg-success text-dark" style="font-variant: small-caps;">
+				<tr>
+					<th>Mã vai trò</th>
+					<th>Tên vai trò</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="role in pager.items">
+					<td>{{role.id}}</td>
+					<td>{{role.name}}</td>
+					<td>
+						<div class="btn-group btn-group-xs">
+							<button ng-click="edit(role)" type="button"
+								class="btn btn-warning fa fa-edit"></button>
+							<button ng-click="delete(role.id)" type="button"
+								class="btn btn-danger">
+								<b class="fa fa-trash"></b>
+							</button>
+						</div>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+		<div class="card-footer text-center">
+			<button ng-click="pager.first()" type="button"
+				class="btn btn-primary">
+				<b class="fa fa-fast-backward"></b>
+			</button>
+			<button ng-click="pager.prev()" type="button" class="btn btn-primary">
+				<b class="fa fa-backward"></b>
+			</button>
+			<button ng-click="pager.first()" type="button"
+				class="btn btn-success">{{pager.page + 1}} of
+				{{pager.count}}</button>
+			<button ng-click="pager.next()" type="button" class="btn btn-primary">
+				<b class="fa fa-forward"></b>
+			</button>
+			<button ng-click="pager.last()" type="button" class="btn btn-primary">
+				<b class="fa fa-fast-forward"></b>
+			</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<div class="card">
+	<section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+          <h2 class="mb-2">Danh sách phiếu tiêm</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center ftco-animate">
+        <div class="col-md-10">
+          <div class="carousel-testimony owl-carousel ftco-owl">
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Mã phiếu tiêm</th>
+                  <th scope="col">Cơ sở y tế</th>
+                  <th scope="col">Địa chỉ</th>
+                  <th scope="col">Mã người tiêm</th>
+                  <th scope="col">Mã đợt tiêm</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="p in items">
+                  <td>{{p.idphieutiem}}</td>
+                  <td>{{p.cosoyte}}</td>
+                  <td>{{p.diachi}}</td>
+                  <td>{{p.dangkytiemchung.idnguoitiem}}</td>
+                  <td>{{p.dottiem.iddottiem}}</td>
+                  <td><button type="submit" ng-click="edit(p)" class="btn btn-secondary">Chỉnh sửa</button></td>
+                </tr>
+            
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

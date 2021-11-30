@@ -1,0 +1,91 @@
+<div class="card">
+
+	<div class="card-body">
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-5">
+					<div class="col-md-7 text-center heading-section ftco-animate">
+						<h2 class="mb-2">Quản lý loại Vaccine</h2>
+
+					</div>
+				</div>
+				<form name="frm">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputId">ID Vaccine</label>
+								<div ng-hide="frm.txtID.$valid">Vui lòng nhập ID Vaccine</div>
+								<input name="txtID" class="form-control" id="exampleInputId"
+									ng-model="form.idvacxin" placeholder="Nhập ID Vaccine" required>
+
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputName">Tên Vaccine</label>
+								<div ng-hide="frm.txtName.$valid">Vui lòng nhập tên
+									Vaccine</div>
+								<input name="txtName" class="form-control" id="exampleInputName"
+									ng-model="form.tenvacxin" placeholder="Nhập tên Vaccine"
+									required>
+
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputHang">Tên hãng</label> <div ng-hide="frm.txttenhang.$valid">Vui lòng nhập tên
+									hãng</div> <input
+									name="txttenhang" class="form-control" id="exampleInputHang"
+									ng-model="form.tenhang" placeholder="Nhập tên hãng" required>
+								
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputQuocgia">Tên quốc gia</label> <br>
+
+								<select class="custom-select" ng-model="form.tenquocgia">
+									<option ng-repeat="cty in country" ng-value="cty.Country">{{cty.Country}}</option>
+								</select>
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleInputTime">Thời gian mũi 2(tuần)</label>
+								<div ng-hide="frm.txttime.$valid">Vui lòng nhập thời giam
+									tiêm mũi 2</div>
+								<input name="txttime" class="form-control" type="number" min="0"
+									id="exampleInputTime" ng-model="form.thoigianmui2"
+									placeholder="Nhập thời gian tiêm mũi 2" required>
+
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="button-group">
+								<br> <br>
+								<button type="submit" id="us" class="btn btn-primary"
+									ng-click="reset()">Làm mới</button>
+								<button type="submit" id="create" class="btn btn-success"
+									ng-click="create()">Thêm</button>
+								<button type="submit" id="update" class="btn btn-warning"
+									ng-click="update()">Sửa</button>
+								<button type="submit" id="delete" class="btn btn-danger"
+									ng-click="delete(form)">Xóa</button>
+
+							</div>
+						</div>
+					</div>
+
+
+				</form>
+
+			</div>
+		</section>
+	</div>
+</div>

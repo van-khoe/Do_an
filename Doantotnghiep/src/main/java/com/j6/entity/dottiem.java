@@ -30,7 +30,6 @@ public class dottiem implements Serializable {
 	@Column(name = "ngaytiem")
 	Date ngaytiem = new Date();
 	String diadiemtiem;
-	Time thoigiandienra;
 	
 	@ManyToOne()
 	@JoinColumn(name = "vacxin_idvacxin")
@@ -39,4 +38,7 @@ public class dottiem implements Serializable {
 	@JsonIgnore
 	@OneToMany(mappedBy = "dottiem")
 	List<lichsutiem> lichsutiem;
+	@JsonIgnore
+	@OneToMany(mappedBy = "dottiem")
+	List<phieutiem> phieutiem;
 }

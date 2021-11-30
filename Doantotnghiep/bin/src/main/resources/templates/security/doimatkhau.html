@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+	<main>
+		<section class="home-slider owl-carousel">
+			<div class="slider-item bread-item"
+				style="background-image: url('/assert/images/bg_1.jpg');"
+				data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="container" data-scrollax-parent="true">
+					<div class="row slider-text align-items-end">
+						<div class="col-md-7 col-sm-12 ftco-animate mb-5">
+							<p class="breadcrumbs"
+								data-scrollax=" properties: { translateY: '70%', opacity: 1.6}">
+								<span class="mr-2"><a href="index.html">Trang chủ</a></span> <span>
+									Liên hệ</span>
+							</p>
+							<h1 class="mb-3"
+								data-scrollax=" properties: { translateY: '70%', opacity: .9}">LIÊN
+								HỆ</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+					<div class="col-md-7 text-center heading-section ftco-animate">
+						<h2 class="mb-2">Liên hệ</h2>
+					</div>
+				</div>
+				<div class="row justify-content-center ftco-animate"
+					style="border-radius: .25rem; padding: 10px; border: 1px solid rgb(231, 231, 231); box-shadow: 10px 10px 10px #b3b3b3;">
+					<div class="col-md-9">
+						<div class="carousel-testimony owl-carousel ftco-owl">
+							<form>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group row">
+											<label for="staticDate" class=" col-form-label">Tên
+												người dùng</label>
+											<div class="col-sm-10">
+												<input type="text" id="username">
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group row">
+											<label for="staticHoten" class="col-form-label">Mật
+												Khẩu</label>
+											<div class="col-sm-10">
+												<input type="text" id="matkhaucu">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group row">
+												<label for="staticHoten" class="col-form-label">Mật
+													khẩu mới</label>
+												<div class="col-sm-10">
+													<input type="text" id="doimatkhau">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group row">
+													<button style="background-color: aqua;">Đổi mật
+														khẩu</button>
+												</div>
+											</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+</body>
+</html>

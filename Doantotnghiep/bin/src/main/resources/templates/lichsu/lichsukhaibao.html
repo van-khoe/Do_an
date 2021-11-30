@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+	<main>
+		<section class="home-slider owl-carousel">
+			<div class="slider-item bread-item"
+				style="background-image: url('/assert/images/bg_1.jpg');"
+				data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="container" data-scrollax-parent="true">
+					<div class="row slider-text align-items-end">
+						<div class="col-md-7 col-sm-12 ftco-animate mb-5">
+							<p class="breadcrumbs"
+								data-scrollax=" properties: { translateY: '70%', opacity: 1.6}">
+								<span class="mr-2"><a href="index.html">Trang quản
+										trị</a></span>
+							</p>
+							<h1 class="mb-3"
+								data-scrollax=" properties: { translateY: '70%', opacity: .9}">Lịch
+								sử khai báo</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="conteiner">
+			<h3 style="color: rgb(45, 45, 65); font-weight: bold; margin: 0;">Danh
+				sách tờ khai</h3>
+			<br>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th scope="col">Số thứ tự</th>
+						<th scope="col">Họ và tên</th>
+						<th scope="col">Ngày khai báo</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>Huỳnh Nguyễn Phương Uyên</td>
+						<td>10-12-2021</td>
+						<td><a href="#">Chỉnh sửa</a></td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>Thái Hoàng Mai Học</td>
+						<td>10-12-2021</td>
+						<td><a href="#">Chỉnh sửa</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</main>
+</body>
+</html>

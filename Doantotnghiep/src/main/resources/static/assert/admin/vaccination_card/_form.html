@@ -1,0 +1,66 @@
+<div class="card">
+	
+	<div class="card-body">
+		<section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 text-center heading-section ftco-animate">
+          <h2 class="mb-2">Quản lý phiếu tiêm</h2>
+
+        </div>
+      </div>
+      <form>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="exampleInputId">Cơ sở y tế</label>
+              <input class="form-control" id="exampleInputId" ng-model="form.cosoyte" placeholder="Nhập Cơ sở y tế">
+      
+            </div>
+          </div>
+           </div>
+             <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="exampleInputName">Địa chỉ</label>
+              <input class="form-control" id="exampleInputName" ng-model="form.diachi" placeholder="Nhập địa chỉ">
+      
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="exampleInputHang">Mã người tiêm</label>
+              <input class="form-control" id="exampleInputHang" ng-model="form.dangkytiemchung.idnguoitiem" placeholder="Nhập mã người tiêm">
+      
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="exampleInputQuocgia">Mã đợt tiêm</label>
+              <input class="form-control" id="exampleInputQuocgia" ng-model="form.dottiem.iddottiem" placeholder="Nhập mã đợt tiêm">
+      
+            </div>
+          </div>
+        </div>
+        <div class="row">
+         
+          <div class="col-md-12 text-center">
+            <div class="button-group">
+              <br> <br>
+              <button type="submit" class="btn btn-primary" ng-click="reset()">Làm mới</button>
+              <button type="submit" class="btn btn-success" ng-click="create()">Thêm</button>
+              <button type="submit" class="btn btn-warning" ng-click="update()">Sửa</button>
+              <button type="submit" class="btn btn-danger" ng-click="delete(form)">Xóa</button>
+      
+            </div>
+          </div>
+        </div>
+      
+      
+      </form>
+
+    </div>
+  </section>
+</div></div>

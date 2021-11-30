@@ -9329,3 +9329,24 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    
+.lichhen:link{
+    color: blue;
+    text-decoration: none;
+}
+ 
+.lichhen:visited{
+    color: black;
+    text-decoration: underline;
+}
+ 
+.lichhen:hover{
+    color: blue;
+    text-decoration: underline;
+}
+ 
+.lichhen:active{
+    color: white;
+    text-decoration: none;
+}

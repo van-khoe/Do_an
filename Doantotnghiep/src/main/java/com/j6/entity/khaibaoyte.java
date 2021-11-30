@@ -23,7 +23,7 @@ import lombok.Data;
 public class khaibaoyte implements Serializable {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long idkhaibaoyte;
 	String hoten;
 	String cmnd;

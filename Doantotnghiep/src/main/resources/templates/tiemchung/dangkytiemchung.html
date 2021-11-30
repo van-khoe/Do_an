@@ -14,120 +14,100 @@
 						<div class="col-md-7 col-sm-12 ftco-animate mb-5">
 							<p class="breadcrumbs"
 								data-scrollax=" properties: { translateY: '70%', opacity: 1.6}">
-								<span class="mr-2"><a href="index.html">Trang chủ</a></span> <span>Đăng
-									ký tiêm chủng</span>
+								<span class="mr-2"><a th:href="@{/}">Trang chủ</a></span> <span>Đăng
+									ký tiêm Vaccine</span>
 							</p>
 							<h1 class="mb-3"
 								data-scrollax=" properties: { translateY: '70%', opacity: .9}">ĐĂNG
-								KÝ TIÊM CHỦNG</h1>
+								KÝ TIÊM VACCINE</h1>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
 
 
 		<section class="ftco-section">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-3">
 					<div class="col-md-7 text-center heading-section ftco-animate">
-						<h2 class="mb-2">Phiếu lịch hẹn tiêm chủng COVID-19</h2>
+						<h2 class="mb-2" style="font-weight: bolder;">PHIẾU ĐĂNG KÝ TIÊM VACCINE COVID-19</h2>
 					</div>
 				</div>
 				<div class="row justify-content-center ftco-animate"
-					style="border-radius: .25rem; padding: 10px; border: 1px solid rgb(231, 231, 231); box-shadow: 10px 10px 10px #b3b3b3;">
+					style="border-radius: .25rem; padding: 10px; border: 1px solid rgb(231, 231, 231); box-shadow: 10px 10px 10px #b3b3b3;background-color: #FFFFFF;">
 					<div class="col-md-9">
-						<div class="carousel-testimony owl-carousel ftco-owl">
-							<form>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group row">
-											<label for="staticDate" class="col-sm-2 col-form-label">Họ
-												và tên</label>
-											<div class="col-sm-10">
-												<input type="text" id="hoten">
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group row">
-											<label for="staticTime" class="col-sm-2 col-form-label">Tên
-												tài khoản</label>
-											<div class="col-sm-10">
-												<input type="text" id="username">
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="staticDiachi" class="col-sm-2 col-form-label">Địa
-										chỉ</label>
-									<div class="col-sm-10">
-										<input type="text" id="Diachi">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group row">
-											<label for="staticHoten" class="col-sm-2 col-form-label">Số
-												điện thoại</label>
-											<div class="col-sm-10">
-												<input type="text" id="sdt">
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group row">
-											<label for="staticGender" class="col-sm-2 col-form-label">Giới
-												tính</label>
-											<div class="col-sm-10">
-												<input type="text" id="gioitinh">
-											</div>
-										</div>
-									</div>
+						<form th:action="@{/dangkytiemchung}" method="post"
+							th:object="${dk}">
 
-								</div>
-								<div class="form-group row">
-									<label for="staticBirthdate" class="col-sm-2 col-form-label">Ngày
-										sinh</label>
-									<div class="col-sm-10">
-										<input type="text" id="staticBirthdate">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="staticBirthdate" class="col-sm-2 col-form-label">Số
-										CMND/CCCN</label>
-									<div class="col-sm-10">
-										<input type="text" id="CMND/CCCD">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="staticBirthdate" class="col-sm-2 col-form-label">Tiền
-										sử bệnh</label>
-									<div class="col-sm-10">
-										<input type="text" id="tiensubenh">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group row">
-										<div class="col-sm-10">
-											<button style="background-color: aqua;">Đăng ký tiêm</button>
-										</div>
-									</div>
-								</div>
-							</form>
 
-						</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="inputname4">Họ & tên</label> <i
+										th:errors="*{hoten}"></i> <input class="form-control"
+										id="inputname4" th:field="*{hoten}">
+								</div>
+							
+								<div class="form-group col-md-6">
+									<label for="inputbirthday4">Ngày sinh</label><i
+										th:errors="*{ngaysinh}"></i> <input type="date"
+										class="form-control" id="inputbirthday4"
+										th:field="*{ngaysinh}">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputAddress">CMND/CCCD</label><i
+									th:errors="*{cmnd}"></i> <input class="form-control"
+									id="inputAddress" th:field="*{cmnd}">
+							</div>
+
+
+							<fieldset class="form-group row">
+								<legend class="col-form-label col-sm-2 float-sm-left pt-0">Giới
+									tính</legend>
+								<i th:errors="*{gioitinh}"></i>
+								<div class="col-sm-10">
+
+								
+									
+									<div class="form-check-inline">
+														<input class="form-check-input" type="radio"
+															th:field="*{gioitinh}" value="1"> <label
+															class="form-check-label" for="gridRadios1"> Nam </label>
+													</div>
+													<div class="form-check-inline">
+														<input class="form-check-input" type="radio"
+															th:field="*{gioitinh}" value="0"> <label
+															class="form-check-label" for="gridRadios2"> Nữ </label>
+													</div>
+								</div>
+							</fieldset>
+
+
+
+							<div class="form-group">
+								<label for="inputState">Tiền sử bệnh</label>	<i th:errors="*{tiensubenh}"></i>
+								<textarea class="form-control" rows="5" th:field="*{tiensubenh}"></textarea>
+							</div>
+
+
+							<button type="submit" class="btn btn-primary">Đăng ký
+								tiêm</button>
+
+						</form>
+
+
 					</div>
 					<div class="col-md-3">
+					<a href="https://www.petrolimex.com.vn/nd/tin-chuyen-nganh/petrolimex-sai-gon-nghiem-tuc-thuc-hien-thong-diep-5k-cua-bo-y-te.html">
 						<img
-							src="/assert/images/20210510_170402_174376_Vacxin_covid.max-800x800.png"
-							style="width: 250px; height: 100%;" alt="">
+							src="/assert/images/tiem-ngua-covid.jpg"
+							style="width: 100%; height: 100%;" alt=""></a>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
+
 </body>
 </html>

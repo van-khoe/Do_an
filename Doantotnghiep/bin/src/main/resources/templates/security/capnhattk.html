@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+	<main>
+		<section class="home-slider owl-carousel">
+			<div class="slider-item bread-item"
+				style="background-image: url('/assert/images/bg_1.jpg');"
+				data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="container" data-scrollax-parent="true">
+					<div class="row slider-text align-items-end">
+						<div class="col-md-7 col-sm-12 ftco-animate mb-5">
+							<p class="breadcrumbs"
+								data-scrollax=" properties: { translateY: '70%', opacity: 1.6}">
+								<span class="mr-2"><a href="index.html">Trang chủ</a></span>
+							</p>
+							<h1 class="mb-3"
+								data-scrollax=" properties: { translateY: '70%', opacity: .9}">Cập
+								nhật tài khoản</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div>
+			<div class="conteiner row">
+				<div class="card mb-3 col-lg-7 col-md-12 col-sm-12"
+					style="max-width: 560px;">
+					<div class="row g-0">
+						<div class="col-md-12">
+							<div class="card-body">
+								<h1 class="card-title"
+									style="color: blueviolet; font-weight: bolder;">CẬP NHẬT
+									TÀI KHOẢN</h1>
+								<br>
+								<form name="error">
+									<div class="row">
+										<div class="form-group col-sm-12">
+											<label for=""></label> <input type="text"
+												class="form-control" minlength="3" maxlength="25"
+												name="txtTaiKhoan" placeholder="Tải khoản"
+												ng-model="taikhoan" disabled required>
+
+										</div>
+										<div class="form-group col-sm-12">
+											<label for=""></label> <input type="text" name="txtHoTen"
+												class="form-control" placeholder="Họ và tên"
+												pattern="^\S([a-zA-Z\xC0-\uFFFF]{1,60}[ \-\']{0,1}){1,}$"
+												ng-model="fullname" maxlength="25" required />
+
+										</div>
+										<div class="form-group col-sm-12">
+											<label for=""></label> <input type="email" name="txtEmail"
+												class="form-control" placeholder="Email" ng-model="email"
+												required />
+
+										</div>
+										<div class="form-group col-sm-12">
+											<label for=""></label> <input type="date" name="txtBirthday"
+												class="form-control" placeholder="Ngày sinh"
+												ng-model="birthday" required min="1990-01-01"
+												max="2003-01-01" />
+
+										</div>
+										<div class="form-group col-sm-12">
+											<br>
+											<button type="button" class="btn btn-primary"
+												ng-show="error.$valid">
+												<i class="bi bi-arrow-clockwise"></i> CẬP NHẬT
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<img src="/assert/images/coronavirus-update-concept_23-2148729019.webp"
+						style="width: 100%; height: 600px;" alt="...">
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

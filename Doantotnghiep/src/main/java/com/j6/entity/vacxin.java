@@ -19,14 +19,11 @@ import lombok.Data;
 public class vacxin implements Serializable {
 	@Id
 	String idvacxin;
-	String tencvacxin;
+	String tenvacxin;
 	String tenhang;
 	String tenquocgia;
 	Integer thoigianmui2;
 	
-	@JsonIgnore
-	@OneToMany(mappedBy = "vacxin")
-	List<dangkytiemchung> dangkytiemchung;
 	@JsonIgnore
 	@OneToMany(mappedBy = "vacxin")
 	List<dottiem> dottiem;
